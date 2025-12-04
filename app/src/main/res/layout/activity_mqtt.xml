@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mqtt_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/electric_blue">
+
+    <TextView
+        android:id="@+id/txtTituloMoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Panel Lunar de Mensajes"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/electric_pink"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/label_mensaje_moon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mensaje para enviar al Reino Lunar:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/electric_purple" />
+
+    <EditText
+        android:id="@+id/editMensajeMQTT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu mensaje mágico"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnEnviarMQTT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:backgroundTint="@color/electric_pink"
+        android:textColor="@color/electric_yellow"
+        android:padding="14dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/label_recibidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mensajes recibidos del Reino Lunar:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/electric_purple"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/textRecibidosMQTT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:minHeight="120dp"
+        android:textColor="#4A3A4A" />
+
+</LinearLayout>

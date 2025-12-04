@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Text Time</string>
+
+    <!-- Botones generales -->
+    <string name="mqtt">Formulario Mqtt</string>
+    <string name="firebase">Formulario Firebase</string>
+    <string name="reflex_texto">Hola!</string>
+
+    <!-- Pantalla Ghibli -->
+    <string name="titulo_ghibli">Formulario del Bosque Encantado</string>
+
+    <string name="label_nombre">Tu nombre, viajer@:</string>
+    <string name="label_criatura">Criatura Ghibli favorita:</string>
+    <string name="label_lugar">Lugar donde te gustaría vivir:</string>
+
+    <string name="btn_guardar_bosque">Guardar en el Bosque</string>
+
+    <string name="error_campos">Completa todos los campos, viajero</string>
+    <string name="toast_guardado">El Bosque guarda tu mensaje</string>
+</resources>

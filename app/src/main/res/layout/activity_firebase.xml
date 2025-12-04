@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fb_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/electric_blue">
+
+    <TextView
+        android:id="@+id/txtTituloGhibli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_ghibli"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/electric_pink"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/label_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_nombre"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/electric_purple" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/label_criatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_criatura"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/electric_purple" />
+
+    <EditText
+        android:id="@+id/editCriatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/label_lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_lugar"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/electric_purple" />
+
+    <EditText
+        android:id="@+id/editLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnEnviarFB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_guardar_bosque"
+        android:backgroundTint="@color/electric_pink"
+        android:textColor="@color/electric_yellow"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="14dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btnVerFirebase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver los registros del Bosque"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:backgroundTint="@color/electric_pink"
+        android:textColor="@color/electric_yellow"
+        android:padding="14dp"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>

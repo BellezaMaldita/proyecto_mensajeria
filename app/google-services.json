@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "18508706410",
+    "firebase_url": "https://sarai-iot-default-rtdb.firebaseio.com",
+    "project_id": "sarai-iot",
+    "storage_bucket": "sarai-iot.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18508706410:android:4f657a68313f712ae69013",
+        "android_client_info": {
+          "package_name": "cl.sarai.iot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAKQWuqadQSAjcI4rpanmUgsor7O4nhLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

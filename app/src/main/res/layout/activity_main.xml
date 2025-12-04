@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/electric_blue"
+    tools:context=".MainActivity">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/electric_pink"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp" />
+
+    <!-- IMAGEN -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/zoshling"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- INPUT -->
+    <!--<EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Ingresa tu texto"
+        android:textColorHint="@color/electric_yellow"
+        android:padding="12dp"
+        android:background="@drawable/rounded_input"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp" />-->
+
+    <!-- BOTÓN ENVIAR -->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="@string/firebase"
+        android:textStyle="bold"
+        android:textColor="@color/electric_yellow"
+        android:textSize="18sp"
+        android:backgroundTint="@color/electric_pink"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="65dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- BOTÓN VER -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="@string/mqtt"
+        android:textStyle="bold"
+        android:textColor="@color/electric_yellow"
+        android:textSize="18sp"
+        android:backgroundTint="@color/electric_pink"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

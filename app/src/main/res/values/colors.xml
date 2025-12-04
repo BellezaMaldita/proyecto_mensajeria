@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="electric_blue">#03ECF8</color>
+    <color name="electric_pink">#FB03F7</color>
+    <color name="electric_yellow">#E4F802</color>
+    <color name="electric_green">#60F803</color>
+    <color name="electric_purple">#7703F8</color>
+</resources>
