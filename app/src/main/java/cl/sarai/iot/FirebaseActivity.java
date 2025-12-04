@@ -26,11 +26,13 @@ public class FirebaseActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_firebase);
 
-        // Firebase
+        // 1. conexion a firebase con la conexion previamente definida para el proyecto
         firebaseDatabase = FirebaseDatabase.getInstance();
+
+        // 2. se genera una referencia para luego buscar la info en firebase, en este caso ghibli_formulario sera la raiz
         reference = firebaseDatabase.getReference("ghibli_formulario");
 
-        // UI
+        // 3. aca obtenemos todos los datos necesarios ingresados por el usuario en la pantalla de formulario
         editNombre = findViewById(R.id.editNombre);
         editCriatura = findViewById(R.id.editCriatura);
         editLugar = findViewById(R.id.editLugar);
@@ -38,20 +40,23 @@ public class FirebaseActivity extends AppCompatActivity {
         btnEnviarFB = findViewById(R.id.btnEnviarFB);
         btnVerFirebase = findViewById(R.id.btnVerFirebase);
 
-        // Enviar
+        // 4. definimos la accion del boton enviar
         btnEnviarFB.setOnClickListener(v -> {
             String nombre = editNombre.getText().toString().trim();
             String criatura = editCriatura.getText().toString().trim();
             String lugar = editLugar.getText().toString().trim();
 
+            // 5. validamos que no falten registros
             if (nombre.isEmpty() || criatura.isEmpty() || lugar.isEmpty()) {
                 Toast.makeText(this, "Completa todos los campos, viajero", Toast.LENGTH_SHORT).show();
                 return;
             }
 
+            // 6. cargamos nuestro objeto con la info, clase GhibliData
             GhibliData data = new GhibliData(nombre, criatura, lugar);
 
             String key = reference.push().getKey();
+            // 7. aca se sube la info a firebase con key de referencia en nuestra raiz previamente definida ghibli_formulario
             reference.child(key).setValue(data);
 
             editNombre.setText("");

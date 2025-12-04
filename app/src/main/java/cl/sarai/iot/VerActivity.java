@@ -32,6 +32,7 @@ public class VerActivity extends AppCompatActivity {
     }
 
     private void cargarDatos() {
+        // Aca simplemente tomamos la referencia de nustro firebase y buscamos los datos, en este caso de ghibli_formulario
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {

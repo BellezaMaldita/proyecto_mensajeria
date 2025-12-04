@@ -25,8 +25,8 @@ public class MqttActivity extends AppCompatActivity {
 
     private MqttClient mqttClient;
 
-    private final String SERVER_URI = "tcp://broker.hivemq.com:1883";
-    private final String TOPIC = "/sailormoon/sarai/mensajes";
+    private final String SERVER_URI = "tcp://broker.hivemq.com:1883"; // 1. definimos uri del servidor mqtt para pruebas del protocolo
+    private final String TOPIC = "/sailormoon/sarai/mensajes"; // 2. definimos un topico donde se gestionaran los mensajes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +45,24 @@ public class MqttActivity extends AppCompatActivity {
 
     private void conectar() {
         try {
+            /* 3. Creamos el cliente MQTT usando la URL del broker, un ClientID único y memoria volátil.
+                  Este objeto será el que maneje toda la comunicación con el Reino Lunar (el broker). */
             mqttClient = new MqttClient(SERVER_URI, MqttClient.generateClientId(), new MemoryPersistence());
 
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
+            /* cleanSession = true significa “no mantengas sesiones anteriores”.
+               Es una conexión fresca cada vez: nada de mensajes guardados ni colas antiguas.*/
 
+            /* 4. Establecemos conexión con el broker MQTT.
+                  Si resulta todo bien, desde aquí ya podemos enviar y recibir mensajes.*/
             mqttClient.connect(options);
+
+            /* 5. Nos suscribimos al tópico definido.
+                  Suscribirse significa: “avísame cada vez que alguien publique un mensaje en este canal”.*/
             mqttClient.subscribe(TOPIC);
 
+            // 6. Aqui ya directamente se gestiona la respuesta desde el broker
             mqttClient.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) { }
